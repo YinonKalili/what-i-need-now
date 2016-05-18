@@ -1,0 +1,21 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "Simple todo application",
+  "main": ".../ToDo/index.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "bootstrap-material-design": "^4.0.1",
+    "express": "^4.13.4",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.12",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": ".../ToDo/index.js"
+  },
+  "author": "yinon",
+  "license": "ISC"
+}

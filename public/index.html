@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="Todo" dir="rtl">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>ToDo</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">      
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+      <script src="core.js"></script>
+   </head>
+   <body ng-controller="mainController">
+      <div class="container">
+         <div class="jumbotron text-center" id="jumbotron">
+            <h2 >   <span class="label label-default" id="spanlength">{{ todos.length }}</span> &nbsp דברים שצריך לעשות</h2>
+         </div>
+         <div id="todo-list" class="panel panel-default">
+            <div class="panel-body">
+               <div class="page-header" ng-repeat="todo in todos">
+                  <label  class="tasks-list-item">
+                  <input type="checkbox" name="task_3" value="1" class="tasks-list-cb" ng-click="deleteTodo(todo._id)">
+                  <span class="tasks-list-mark"></span>
+                  <span class="tasks-list-desc"> {{ todo.text }}</span>
+                  </label>
+               </div>
+               <br/>
+            </div>
+         </div>
+         <div id="todo-form" class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+               <form name="myForm">
+                  <div class="form-group">
+                     <input type="text" class="form-control input-lg text-center" placeholder=" משימה חדשה  ..." required ng-model="formData.text">
+                  </div>
+                  <button type="submit" id="jumbotron" class="btn btn-defult btn-lg"  ng-disabled="myForm.$invalid" ng-click="createTodo()">הוסף</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
