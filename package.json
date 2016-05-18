@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Simple todo application",
   "main": ".../ToDo/index.js",
+   "engines": {
+    "node": "0.12.4"
+  },
   "dependencies": {
     "body-parser": "^1.15.0",
     "bootstrap-material-design": "^4.0.1",
